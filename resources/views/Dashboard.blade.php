@@ -95,7 +95,6 @@
                     </div>
                 </div>
             </main>
-        </div>
 @endsection
     <script>
         // Event Delegation agar semua tombol status tetap interaktif meski tabel di-render ulang
