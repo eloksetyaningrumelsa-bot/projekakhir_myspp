@@ -133,9 +133,9 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Garrett Winters</td>
+                                        <td>Elsa Elok Setyaningrum</td>
                                         <td>Tokyo</td>
-                                        <td>X AKL</td>
+                                        <td>XI RPL 1</td>
                                         <td>
                                             <button class="btn btn-sm btn-success status-btn">Lunas</button>
                                         </td>
@@ -143,7 +143,7 @@
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>Garrett Winters</td>
+                                        <td>Della Sabrina Indah P</td>
                                         <td>Tokyo</td>
                                         <td>X AKL</td>
                                         <td>
