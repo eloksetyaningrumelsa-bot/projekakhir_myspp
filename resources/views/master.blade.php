@@ -50,7 +50,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <a class="nav-link" href="datasiswa">
+                        <a class="nav-link" href="Datasiswa">
                             <div class="sb-nav-link-icon"><i class="fas fa-user-graduate"></i></div>
                             Data Siswa
                         </a>
