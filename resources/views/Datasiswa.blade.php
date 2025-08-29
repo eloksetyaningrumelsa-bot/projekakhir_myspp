@@ -6,7 +6,7 @@
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
-                            Data Tagihan Terbaru
+                            Data Siswa
                         </div>
                         <div class="card-body">
                             <table id="datatablesSimple" class="table table-bordered">
@@ -16,7 +16,8 @@
                                         <th>Nama</th>
                                         <th>Alamat</th>
                                         <th>Kelas</th>
-                                        <th>Status</th>
+                                        <th>Orang Tua</th>
+                                        <th>No.Telphone</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
