@@ -8,3 +8,6 @@ Route::get('/', function () {
 Route::get('datasiswa', function () {
     return view('datasiswa');
 });
+Route::get('datakelas', function () {
+    return view('datakelas');
+});
