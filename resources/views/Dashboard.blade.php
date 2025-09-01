@@ -64,7 +64,7 @@
                                         <td>Tokyo</td>
                                         <td>XI RPL 1</td>
                                         <td>
-                                            <button class="btn btn-sm btn-success status-btn">Lunas</button>
+                                            <a href="{{ url('') }}" class="btn btn-sm btn-success status-btn">Lunas</a>
                                         </td>
                                         <td>$170,750</td>
                                     </tr>
