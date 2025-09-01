@@ -11,3 +11,4 @@ Route::get('datasiswa', function () {
 Route::get('datakelas', function () {
     return view('datakelas');
 });
+

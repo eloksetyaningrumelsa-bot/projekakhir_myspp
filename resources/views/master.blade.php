@@ -54,7 +54,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-user-graduate"></i></div>
                             Data Siswa
                         </a>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="datakelas">
                             <div class="sb-nav-link-icon"><i class="fas fa-school"></i></div>
                             Data Kelas
                         </a>
