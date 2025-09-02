@@ -11,4 +11,7 @@ Route::get('datasiswa', function () {
 Route::get('datakelas', function () {
     return view('datakelas');
 });
+Route::get('datapembayaran', function () {
+    return view('datapembayaran');
+});
 

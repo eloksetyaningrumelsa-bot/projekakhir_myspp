@@ -23,10 +23,12 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Elsa Elok Setyaningrum</td>
-                                        <td>Tokyo</td>
-                                        <td>XI RPL 1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td>
                                             <button class="btn btn-sm btn-success status-btn">Lunas</button>
                                         </td>
