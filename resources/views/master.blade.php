@@ -58,6 +58,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-school"></i></div>
                             Data Kelas
                         </a>
+                        <a class="nav-link" href="datapembayaran">
+                            <div class="sb-nav-link-icon"><i class="fas fa-money-bill"></i></div>
+                            Pembayaran
+                        </a>
                         <a class="nav-link" href="index.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
                             Log Out
@@ -85,13 +89,14 @@
             </footer>
         </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-            crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
-            crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
-        @stack('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+    @stack('scripts')
 
 </body>
+
 </html>
