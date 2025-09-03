@@ -17,4 +17,7 @@ Route::get('datapembayaran', function () {
 Route::get('login', function () {
     return view('login');
 });
+Route::get('modalbayar', function () {
+    return view('modalbayar');
+});
 

@@ -21,10 +21,6 @@
                             <tr>
                                 <td>1</td>
                                 <td>SMP</td>
-<<<<<<< HEAD
-                                <td>
-                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
-=======
                                  <td>
                                     <!-- tombol ubah -->
                                     <button class="btn btn-link text-warning p-0 me-3 ms-3" title="Ubah">
@@ -35,16 +31,11 @@
                                         onclick="return confirm('Yakin ingin menghapus data ini?')">
                                         <i class="fas fa-trash fa-lg fa-2x"></i>
                                     </button>
->>>>>>> 3ea6aad57a6905698ec32cd7bf37cdcadb3d8ca0
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>SMP</td>
-<<<<<<< HEAD
-                                <td>
-                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
-=======
                                  <td>
                                     <!-- tombol ubah -->
                                     <button class="btn btn-link text-warning p-0 me-3 ms-3" title="Ubah">
@@ -55,17 +46,11 @@
                                         onclick="return confirm('Yakin ingin menghapus data ini?')">
                                         <i class="fas fa-trash fa-lg fa-2x"></i>
                                     </button>
->>>>>>> 3ea6aad57a6905698ec32cd7bf37cdcadb3d8ca0
                                 </td>
                             </tr>
                             <tr>
                                 <td>3</td>
-<<<<<<< HEAD
                                 <td>SMP</td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
-=======
-                                <td>SD</td>
                                  <td>
                                     <!-- tombol ubah -->
                                     <button class="btn btn-link text-warning p-0 me-3 ms-3" title="Ubah">
@@ -76,7 +61,6 @@
                                         onclick="return confirm('Yakin ingin menghapus data ini?')">
                                         <i class="fas fa-trash fa-lg fa-2x"></i>
                                     </button>
->>>>>>> 3ea6aad57a6905698ec32cd7bf37cdcadb3d8ca0
                                 </td>
                             </tr>
                             <!-- Tambah data lainnya -->
