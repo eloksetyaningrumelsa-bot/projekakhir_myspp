@@ -4,13 +4,19 @@
         <div class="container-fluid px-4 mt-3">
             <!-- TABEL -->
             <div class="card mb-4">
-                <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    Data Kelas
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div>
+                        <i class="fas fa-table me-1"></i>
+                        Data Kelas
+                    </div>
+                    <!-- Tombol Tambah Kelas -->
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambahKelasModal">
+                        <i class="fas fa-plus"></i> Tambah Kelas
+                    </button>
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple" class="table table-bordered">
-                        <thead>
+                        <thead class="table-dark">
                             <tr>
                                 <th>No</th>
                                 <th>Jenis Kelas</th>
@@ -21,51 +27,79 @@
                             <tr>
                                 <td>1</td>
                                 <td>SMP</td>
-                                 <td>
+                                <td>
                                     <!-- tombol ubah -->
-                                    <button class="btn btn-link text-warning p-0 me-3 ms-3" title="Ubah">
-                                        <i class="fas fa-edit fa-lg fa-2x"></i>
+                                    <button class="btn btn-link text-warning p-0 me-2" title="Ubah">
+                                        <i class="fas fa-edit fa-2x"></i>
                                     </button>
                                     <!-- tombol hapus -->
-                                    <button class="btn btn-link text-danger p-0" title="Hapus"
+                                    <button class="btn btn-link text-danger p-0 ms-2" title="Hapus"
                                         onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                        <i class="fas fa-trash fa-lg fa-2x"></i>
+                                        <i class="fas fa-trash fa-2x"></i>
                                     </button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>SMP</td>
-                                 <td>
+                                <td>SMA</td>
+                                <td>
                                     <!-- tombol ubah -->
-                                    <button class="btn btn-link text-warning p-0 me-3 ms-3" title="Ubah">
-                                        <i class="fas fa-edit fa-lg fa-2x"></i>
+                                    <button class="btn btn-link text-warning p-0 me-2" title="Ubah">
+                                        <i class="fas fa-edit fa-2x"></i>
                                     </button>
                                     <!-- tombol hapus -->
-                                    <button class="btn btn-link text-danger p-0" title="Hapus"
+                                    <button class="btn btn-link text-danger p-0 ms-2" title="Hapus"
                                         onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                        <i class="fas fa-trash fa-lg fa-2x"></i>
+                                        <i class="fas fa-trash fa-2x"></i>
                                     </button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>SD</td>
-                                 <td>
+                                <td>
                                     <!-- tombol ubah -->
-                                    <button class="btn btn-link text-warning p-0 me-3 ms-3" title="Ubah">
-                                        <i class="fas fa-edit fa-lg fa-2x"></i>
+                                    <button class="btn btn-link text-warning p-0 me-2" title="Ubah">
+                                        <i class="fas fa-edit fa-2x"></i>
                                     </button>
                                     <!-- tombol hapus -->
-                                    <button class="btn btn-link text-danger p-0" title="Hapus"
+                                    <button class="btn btn-link text-danger p-0 ms-2" title="Hapus"
                                         onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                        <i class="fas fa-trash fa-lg fa-2x"></i>
+                                        <i class="fas fa-trash fa-2x"></i>
                                     </button>
                                 </td>
                             </tr>
                             <!-- Tambah data lainnya -->
                         </tbody>
                     </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL TAMBAH KELAS -->
+        <div class="modal fade" id="tambahKelasModal" tabindex="-1" aria-labelledby="tambahKelasModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-secondary text-white">
+                        <h5 class="modal-title" id="tambahKelasModalLabel">
+                            <i class="fas fa-school"></i> Tambah Kelas
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="{{ url('/kelas/store') }}" method="POST">
+                        @csrf
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="jenis_kelas" class="form-label">Jenis Kelas</label>
+                                <input type="text" class="form-control" id="jenis_kelas" name="jenis_kelas" placeholder="Masukkan jenis kelas" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
