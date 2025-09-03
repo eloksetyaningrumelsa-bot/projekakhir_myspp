@@ -21,20 +21,47 @@
                             <tr>
                                 <td>1</td>
                                 <td>SMP</td>
-                                <td>
-                                    <button class="btn btn-sm btn-success status-btn">Lunas</button>
+                                 <td>
+                                    <!-- tombol ubah -->
+                                    <button class="btn btn-link text-warning p-0 me-3 ms-3" title="Ubah">
+                                        <i class="fas fa-edit fa-lg fa-2x"></i>
+                                    </button>
+                                    <!-- tombol hapus -->
+                                    <button class="btn btn-link text-danger p-0" title="Hapus"
+                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="fas fa-trash fa-lg fa-2x"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>SMP</td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                 <td>
+                                    <!-- tombol ubah -->
+                                    <button class="btn btn-link text-warning p-0 me-3 ms-3" title="Ubah">
+                                        <i class="fas fa-edit fa-lg fa-2x"></i>
+                                    </button>
+                                    <!-- tombol hapus -->
+                                    <button class="btn btn-link text-danger p-0" title="Hapus"
+                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="fas fa-trash fa-lg fa-2x"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>SD</td>
-                                <td>
-                                    <button class="btn btn-sm btn-success status-btn">Lunas</button>
+                                 <td>
+                                    <!-- tombol ubah -->
+                                    <button class="btn btn-link text-warning p-0 me-3 ms-3" title="Ubah">
+                                        <i class="fas fa-edit fa-lg fa-2x"></i>
+                                    </button>
+                                    <!-- tombol hapus -->
+                                    <button class="btn btn-link text-danger p-0" title="Hapus"
+                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="fas fa-trash fa-lg fa-2x"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <!-- Tambah data lainnya -->
                         </tbody>

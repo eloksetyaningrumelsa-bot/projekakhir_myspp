@@ -26,9 +26,16 @@
                                 <td>SPP Bulan Agustus</td>
                                 <td>02-09-2025</td>
                                 <td>Rp 350.000</td>
-                                <td>
-                                    <button class="btn btn-sm btn-success">Lunas</button>
-                                    <button class="btn btn-sm btn-danger">Hapus</button>
+                                 <td>
+                                    <!-- tombol ubah -->
+                                    <button class="btn btn-link text-warning p-0 me-3 ms-2" title="Ubah">
+                                        <i class="fas fa-edit fa-lg fa-2x"></i>
+                                    </button>
+                                    <!-- tombol hapus -->
+                                    <button class="btn btn-link text-danger p-0" title="Hapus"
+                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="fas fa-trash fa-lg fa-2x"></i>
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
@@ -38,8 +45,15 @@
                                 <td>-</td>
                                 <td>Rp 350.000</td>
                                 <td>
-                                    <button class="btn btn-sm btn-warning">Belum Bayar</button>
-                                    <button class="btn btn-sm btn-danger">Hapus</button>
+                                    <!-- tombol ubah -->
+                                    <button class="btn btn-link text-warning p-0 me-3 ms-2" title="Ubah">
+                                        <i class="fas fa-edit fa-lg fa-2x"></i>
+                                    </button>
+                                    <!-- tombol hapus -->
+                                    <button class="btn btn-link text-danger p-0" title="Hapus"
+                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="fas fa-trash fa-lg fa-2x"></i>
+                                    </button>
                                 </td>
                             </tr>
                             <!-- Tambahkan data lainnya -->
