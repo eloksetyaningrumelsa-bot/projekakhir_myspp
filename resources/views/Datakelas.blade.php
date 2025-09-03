@@ -1,4 +1,4 @@
-@extends ('master')
+@extends('master')
 @section('isi')
     <main>
         <div class="container-fluid px-4 mt-3">
@@ -22,19 +22,22 @@
                                 <td>1</td>
                                 <td>SMP</td>
                                 <td>
-                                    <button class="btn btn-sm btn-success status-btn">Lunas</button>
+                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>SMP</td>
                                 <td>
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>SD</td>
+                                <td>SMP</td>
                                 <td>
-                                    <button class="btn btn-sm btn-success status-btn">Lunas</button>
+                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                </td>
                             </tr>
                             <!-- Tambah data lainnya -->
                         </tbody>
@@ -43,4 +46,27 @@
             </div>
         </div>
     </main>
+
+ 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Pakai event delegation di tbody
+            const tbody = document.querySelector("#datatablesSimple tbody");
+
+            tbody.addEventListener("click", function (e) {
+                if (e.target && e.target.classList.contains("status-btn")) {
+                    let btn = e.target;
+                    if (btn.classList.contains("btn-success")) {
+                        btn.classList.remove("btn-success");
+                        btn.classList.add("btn-danger");
+                        btn.textContent = "Belum Bayar";
+                    } else {
+                        btn.classList.remove("btn-danger");
+                        btn.classList.add("btn-success");
+                        btn.textContent = "Lunas";
+                    }
+                }
+            });
+        });
+    </script>
 @endsection

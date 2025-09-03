@@ -64,30 +64,32 @@
                                 <td>Elsa Elok Setyaningrum</td>
                                 <td>Tokyo</td>
                                 <td>XI RPL 1</td>
-                                <td>
-                                    <button class="btn btn-sm btn-success status-btn">Lunas</button>
-                                </td>
                                 <td>$170,750</td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                </td>
+                               
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Della Sabrina Indah P</td>
                                 <td>Tokyo</td>
                                 <td>X AKL</td>
+                                <td>$170,750</td>
                                 <td>
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>
-                                <td>$170,750</td>
+                               
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Garrett Winters</td>
                                 <td>Tokyo</td>
                                 <td>X AKL</td>
+                               <td>$170,750</td>
                                 <td>
-                                    <button class="btn btn-sm btn-success status-btn">Lunas</button>
+                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>
-                                <td>$170,750</td>
                             </tr>
                         </tbody>
 
@@ -96,42 +98,27 @@
             </div>
         </div>
     </main>
-
-    <!-- FOOTER -->
-    <footer class="py-4 bg-light mt-auto">
-        <div class="container-fluid px-4">
-            <div class="d-flex align-items-center justify-content-between small">
-                <div class="text-muted">Copyright &copy; MySPP BRILLIANT 2025 RPL SMK PGRI WLINGI</div>
-            </div>
-        </div>
-    </footer>
-@endsection
-
-@push('scripts')
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const tableBody = document.querySelector("#datatablesSimple tbody");
+            // Pakai event delegation di tbody
+            const tbody = document.querySelector("#datatablesSimple tbody");
 
-            // Pastikan tabel ada
-            if (!tableBody) return;
-
-            // Event klik tombol status
-            tableBody.addEventListener("click", function (e) {
+            tbody.addEventListener("click", function (e) {
                 if (e.target && e.target.classList.contains("status-btn")) {
-                    const btn = e.target;
-                    const currentStatus = btn.innerText.trim();
-
-                    if (currentStatus === "Lunas") {
+                    let btn = e.target;
+                    if (btn.classList.contains("btn-success")) {
                         btn.classList.remove("btn-success");
                         btn.classList.add("btn-danger");
-                        btn.innerText = "Belum Bayar";
+                        btn.textContent = "Belum Bayar";
                     } else {
                         btn.classList.remove("btn-danger");
                         btn.classList.add("btn-success");
-                        btn.innerText = "Lunas";
+                        btn.textContent = "Lunas";
                     }
                 }
             });
         });
     </script>
-@endpush
+
+
+@endsection
