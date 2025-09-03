@@ -14,4 +14,10 @@ Route::get('datakelas', function () {
 Route::get('datapembayaran', function () {
     return view('datapembayaran');
 });
+Route::get('login', function () {
+    return view('login');
+});
+Route::get('modalbayar', function () {
+    return view('modalbayar');
+});
 
