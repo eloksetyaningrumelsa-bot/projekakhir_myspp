@@ -55,7 +55,7 @@
                                 <th>Alamat</th>
                                 <th>Kelas</th>
                                 <th>Status</th>
-                                <th>Nominal</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
