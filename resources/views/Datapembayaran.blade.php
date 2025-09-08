@@ -5,7 +5,7 @@
             <!-- TABEL PEMBAYARAN -->
             <div class="card mb-4">
                 <div class="card-header text-center fw-bold">
-                    TABEL PEMBAYARAN
+                    TABEL PEMBAYARAN MYSPP
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple" class="table table-bordered text-center">
