@@ -6,7 +6,7 @@
         <div class="container-fluid px-4 mt-3">
             <!-- KARTU JUMLAH SISWA -->
             <div class="row">
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-3">
                     <div class="card bg-primary text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">TK</h5>
@@ -14,7 +14,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-3">
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">SD</h5>
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-3">
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">SMP</h5>
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-3">
                     <div class="card bg-danger text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">SMA/SMK</h5>
@@ -64,9 +64,11 @@
                                 <td>Elsa Elok Setyaningrum</td>
                                 <td>Tokyo</td>
                                 <td>XI RPL 1</td>
-                                <td>$170,750</td>
                                 <td>
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                </td>
+                                <td>
+                                    
                                 </td>
                                
                             </tr>
@@ -75,24 +77,15 @@
                                 <td>Della Sabrina Indah P</td>
                                 <td>Tokyo</td>
                                 <td>X AKL</td>
-                                <td>$170,750</td>
                                 <td>
-                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                </td>
+                                <td>
+                                   
                                 </td>
                                
                             </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Garrett Winters</td>
-                                <td>Tokyo</td>
-                                <td>X AKL</td>
-                               <td>$170,750</td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
-                                </td>
-                            </tr>
                         </tbody>
-
                     </table>
                 </div>
             </div>
