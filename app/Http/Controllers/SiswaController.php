@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class SiswaController extends Controller
@@ -11,17 +12,21 @@ class SiswaController extends Controller
      */
     public function index()
     {
-                return view('datasiswa.index');
+        // mengambil seluruh data dari tb_Lokasi
+        $siswa = Siswa::all();
+        // melakukan pasing data ke view index
+        return view('datasiswa.index', ['siswa' => $siswa]);
+    }
 
+    public function tambah()
+    {
+        return view('datasiswa.tambah');
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        return view('datasiswa.tambah');
-    }
+    
 
     /**
      * Store a newly created resource in storage.

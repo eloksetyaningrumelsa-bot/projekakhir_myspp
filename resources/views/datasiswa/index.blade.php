@@ -49,28 +49,6 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Della Sabrina Indah P</td>
-                                <td>Tokyo</td>
-                                <td>X AKL</td>
-                                <td>Orang Tua Della</td>
-                                <td>081234567890</td>
-                                <td>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <!-- tombol ubah -->
-                                        <button class="btn btn-link text-warning p-0" title="Ubah">
-                                            <i class="fas fa-edit fa-2x"></i>
-                                        </button>
-                                        <!-- tombol hapus -->
-                                        <button class="btn btn-link text-danger p-0" title="Hapus"
-                                            onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                            <i class="fas fa-trash fa-2x"></i>
-                                        </button>
-                                    </div>
-                                </td>
-
-                            </tr>
                             <!-- Tambah data lainnya -->
                         </tbody>
                     </table>

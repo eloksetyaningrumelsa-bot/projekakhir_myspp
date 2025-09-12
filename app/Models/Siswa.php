@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class kelas extends Model
+class Siswa extends Model
 {
-    protected $table = 'tb_kelas';
+    //
+    protected $table = 'tb_siswa';
 
     // Tambahkan ini
-    protected $fillable = ['jenis_kelas'];
+    protected $fillable = ['nama','alamat','kelas','orang_tua','no_telepon'];
     // ini untuk menyambungkan ke table
     public $timestamps = false; // agar tidak error
 }
