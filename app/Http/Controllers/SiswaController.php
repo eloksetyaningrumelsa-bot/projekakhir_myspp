@@ -76,7 +76,24 @@ class SiswaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+          $request->validate([
+        'nama_lengkap' => 'required|string|max:100',
+        'alamat'       => 'required',
+        'kelas'        => 'required',
+        'ortu'         => 'required',
+        'no_tlpn'      => 'required',
+    ]);
+
+    $siswa = Siswa::findOrFail($id);
+    $siswa->update([
+        'nama'       => $request->nama_lengkap,
+        'alamat'     => $request->alamat,
+        'kelas'      => $request->kelas,
+        'orang_tua'  => $request->ortu,
+        'no_telepon' => $request->no_tlpn,
+    ]);
+    
+    return redirect('/datasiswa')->with('success', 'Data siswa berhasil diperbarui!');
     }
 
     /**

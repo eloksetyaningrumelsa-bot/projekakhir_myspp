@@ -6,6 +6,7 @@
 
             <form action="{{ url('/datasiswa/update/' . $siswa->id) }}" method="POST">
                 @csrf
+                @method('PUT')
                 <div class="modal-body">
 
                     <div class="mb-3">
@@ -42,7 +43,7 @@
 
                 <!-- Footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-danger me-2" data-bs-dismiss="modal">Batal</button>
                     <button type="submit" class="btn btn-success">Simpan</button>
                 </div>
             </form>

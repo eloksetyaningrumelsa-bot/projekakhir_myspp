@@ -16,7 +16,7 @@ Route::get('/datasiswa', [SiswaController::class, 'index']);
 Route::get('/datasiswa/tambah', [SiswaController::class, 'create'])->name('datasiswa.add');
 Route::post('/datasiswa', [SiswaController::class, 'store']);
 Route::get('/datasiswa/edit/{id}', [SiswaController::class, 'edit']);
-Route::get('/datasiswa/update/{id}', [SiswaController::class, 'update']);
+Route::put('/datasiswa/update/{id}', [SiswaController::class, 'update']);
 
 
 // data kelas 
