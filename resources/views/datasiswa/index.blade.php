@@ -10,7 +10,7 @@
                         Data Siswa
                     </div>
                     <!-- Tombol Tambah Siswa -->
-                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambahSiswaModal">
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambahSiswa">
                         <i class="fas fa-plus"></i> Tambah Siswa
                     </button>
                 </div>

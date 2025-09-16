@@ -12,8 +12,8 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        // mengambil seluruh data dari tb_Lokasi
-        $siswa = Siswa::all();
+        // mengambil seluruh data dari tb_siswa
+        $siswa = Siswa ::all();
         // melakukan pasing data ke view index
         return view('datasiswa.index', ['siswa' => $siswa]);
     }
@@ -33,7 +33,24 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $request->validate([
+        'nama_lengkap' => 'required|string|max:100',
+        'alamat'       => 'required',
+        'kelas'        => 'required',
+        'ortu'         => 'required',
+        'no_telepon'   => 'required',
+    ]);
+
+        // simpan ke database
+        Siswa::create([
+        'nama'       => $request->nama_lengkap,
+        'alamat'     => $request->alamat,
+        'kelas'      => $request->kelas,
+        'orang_tua'  => $request->ortu,
+        'no_telepon' => $request->no_telepon,
+    ]);
+
+    return redirect('/datasiswa')->with('success', 'Data siswa berhasil ditambahkan!');
     }
 
     /**
