@@ -13,10 +13,12 @@ Route::get('/', function () {
 });
 //data siswa 
 Route::get('/datasiswa', [SiswaController::class, 'index']);
-Route::get('/datasiswa/tambah', [SiswaController::class, 'create'])->name('datasiswa.add');
+Route::get('/datasiswa/tambah', [SiswaController::class, 'create']);
 Route::post('/datasiswa', [SiswaController::class, 'store']);
 Route::get('/datasiswa/edit/{id}', [SiswaController::class, 'edit']);
 Route::put('/datasiswa/update/{id}', [SiswaController::class, 'update']);
+Route::get('/datasiswa/delete/{id}', [SiswaController::class, 'destroy']);
+
 
 
 // data kelas 
@@ -25,7 +27,7 @@ Route::get('/datakelas/tambah', [KelasController::class, 'create'])->name('datak
 Route::post('/datakelas', [KelasController::class, 'store']);
 
 
-
+//data pembayaran 
 Route::get('datapembayaran', function () {
     return view('datapembayaran');
 });

@@ -18,7 +18,7 @@ class SiswaController extends Controller
         return view('datasiswa.index', ['siswa' => $siswa]);
     }
 
-    public function tambah()
+    public function create()
     {
         return view('datasiswa.tambah');
     }
@@ -38,19 +38,19 @@ class SiswaController extends Controller
         'alamat'       => 'required',
         'kelas'        => 'required',
         'ortu'         => 'required',
-        'no_telepon'   => 'required',
+        'no_tlpn'      => 'required',
     ]);
 
         // simpan ke database
-        Siswa::create([
+         Siswa::create([
         'nama'       => $request->nama_lengkap,
         'alamat'     => $request->alamat,
         'kelas'      => $request->kelas,
         'orang_tua'  => $request->ortu,
-        'no_telepon' => $request->no_telepon,
+        'no_telepon' => $request->no_tlpn,
     ]);
 
-    return redirect('/datasiswa')->with('success', 'Data siswa berhasil ditambahkan!');
+         return redirect('/datasiswa')->with('success', 'Data siswa berhasil ditambahkan!');
     }
 
     /**
@@ -101,6 +101,7 @@ class SiswaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+          $deleted = Siswa::where('id', $id)->delete();
+        return redirect ('/siswa');
     }
 }
