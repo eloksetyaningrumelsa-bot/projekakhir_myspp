@@ -39,9 +39,9 @@
                                     <td>
                                         <div class="d-flex align-items-center gap-2">
                                             <!-- tombol ubah -->
-                                            <button class="btn btn-link text-warning p-0" title="Ubah">
-                                                <i class="fas fa-edit fa-2x"></i>
-                                            </button>
+                                            <a href="/datasiswa/edit/{{ $item->id }}" class="btn btn-warning btn-sm" title="Ubah">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
                                             <!-- tombol hapus -->
                                             <button class="btn btn-link text-danger p-0" title="Hapus"
                                                 onclick="return confirm('Yakin ingin menghapus data ini?')">
@@ -57,7 +57,6 @@
                 </div>
             </div>
         </div>
-
     </main>
     @include('datasiswa.tambah')
 

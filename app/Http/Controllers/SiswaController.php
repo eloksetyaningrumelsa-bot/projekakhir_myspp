@@ -66,7 +66,9 @@ class SiswaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+          $siswa = Siswa::findOrFail($id);
+            return view('datasiswa.edit',compact('siswa'));
+
     }
 
     /**
