@@ -64,7 +64,6 @@
                                 <td>Elsa Elok Setyaningrum</td>
                                 <td>Tokyo</td>
                                 <td>XI RPL 1</td>
-                                <td>$170,750</td>
                                 <td>
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>
@@ -75,7 +74,6 @@
                                 <td>Della Sabrina Indah P</td>
                                 <td>Tokyo</td>
                                 <td>X AKL</td>
-                                <td>$170,750</td>
                                 <td>
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>
@@ -86,7 +84,6 @@
                                 <td>Garrett Winters</td>
                                 <td>Tokyo</td>
                                 <td>X AKL</td>
-                               <td>$170,750</td>
                                 <td>
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>

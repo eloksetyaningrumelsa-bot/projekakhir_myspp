@@ -90,7 +90,7 @@ class SiswaController extends Controller
         'alamat'     => $request->alamat,
         'kelas'      => $request->kelas,
         'orang_tua'  => $request->ortu,
-        'no_telepon' => $request->no_tlpn,
+        'no_telepon' => $request->no_tlpn ,
     ]);
     
     return redirect('/datasiswa')->with('success', 'Data siswa berhasil diperbarui!');
