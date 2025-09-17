@@ -44,7 +44,7 @@
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                             <!-- tombol hapus -->
-                                            <a href="/lokasi/delete/{{$item->id}}" class=" btn btn-link text-danger p-0"
+                                            <a href="/datasiswa/delete/{{$item->id}}" class=" btn btn-link text-danger p-0"
                                                 title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?')">
                                                 <i class="fas fa-trash fa-2x"></i>
                                             </a>
