@@ -12,7 +12,7 @@
                     <!-- Tombol Tambah Kelas -->
                     <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambahKelas">
                         <i class="fas fa-plus"></i> Tambah Kelas
-                        </button>
+                    </button>
 
                 </div>
                 <div class="card-body">
@@ -25,56 +25,31 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>SMP</td>
-                                <td>
-                                    <!-- tombol ubah -->
-                                    <button class="btn btn-link text-warning p-0 me-2" title="Ubah">
-                                        <i class="fas fa-edit fa-2x"></i>
-                                    </button>
-                                    <!-- tombol hapus -->
-                                    <button class="btn btn-link text-danger p-0 ms-2" title="Hapus"
-                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                        <i class="fas fa-trash fa-2x"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>SMA</td>
-                                <td>
-                                    <!-- tombol ubah -->
-                                    <button class="btn btn-link text-warning p-0 me-2" title="Ubah">
-                                        <i class="fas fa-edit fa-2x"></i>
-                                    </button>
-                                    <!-- tombol hapus -->
-                                    <button class="btn btn-link text-danger p-0 ms-2" title="Hapus"
-                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                        <i class="fas fa-trash fa-2x"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>SD</td>
-                                <td>
-                                    <!-- tombol ubah -->
-                                    <button class="btn btn-link text-warning p-0 me-2" title="Ubah">
-                                        <i class="fas fa-edit fa-2x"></i>
-                                    </button>
-                                    <!-- tombol hapus -->
-                                    <button class="btn btn-link text-danger p-0 ms-2" title="Hapus"
-                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                        <i class="fas fa-trash fa-2x"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <!-- Tambah data lainnya -->
+                            @foreach ($kelas as $key => $item)
+                                <tr>
+                                    <td>{{ $key + 1 }}</td>
+                                    <td>{{ $item->jenis_kelas}}</td> {{-- kalau di tabel DB kolomnya nama_kelas --}}
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <!-- tombol ubah -->
+                                            <a href="/datakelas/edit/{{ $item->id }}" class="btn btn-warning btn-sm"
+                                                title="Ubah">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <!-- tombol hapus -->
+                                            <a href="/datakelas/delete/{{$item->id}}" class=" btn btn-link text-danger p-0"
+                                                title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                                <i class="fas fa-trash fa-2x"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
+
                     </table>
                 </div>
             </div>
         </div>
-@include('datakelas.tambah')
+        @include('datakelas.tambah')
 @endsection

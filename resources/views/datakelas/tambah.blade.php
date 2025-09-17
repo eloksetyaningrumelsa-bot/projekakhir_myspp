@@ -19,19 +19,6 @@
                             <input type="text" class="form-control" name="jenis_kelas" id="jenis_kelas"
                                 placeholder="Masukkan kelas" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="alamat" class="form-label">Alamat</label>
-                            <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Masukkan alamat">
-                        </div>
-                        <div class="mb-3">
-                            <label for="kelas" class="form-label">Kelas</label>
-                            <input type="text" class="form-control" name="kelas" id="kelas" placeholder="Masukkan kelas">
-                        </div>
-                        <div class="mb-3">
-                            <label for="ortu" class="form-label">Orang Tua</label>
-                            <input type="text" class="form-control" name="ortu" id="ortu"
-                                placeholder="Masukkan nama orang tua">
-                        </div>
                     </div>
 
                     <!-- Footer -->

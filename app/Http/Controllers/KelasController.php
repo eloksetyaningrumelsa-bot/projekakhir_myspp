@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kelas;
 use Illuminate\Http\Request;
 
 class KelasController extends Controller
@@ -11,8 +12,10 @@ class KelasController extends Controller
      */
     public function index()
     {
-        return view('datakelas.index');
-        
+        // mengambil seluruh data dari tb_siswa
+        $kelas = Kelas ::all();
+        // melakukan pasing data ke view index
+        return view('datakelas.index', ['kelas' => $kelas]);
     }
 
     /**
@@ -21,6 +24,7 @@ class KelasController extends Controller
     public function create()
     {
         return view('datakelas.tambah');
+        
 
     }
 
@@ -29,7 +33,15 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $request->validate([
+        'jenis_kelas' => 'required',
+    ]);
+
+    Kelas::create([
+        'jenis_kelas' => $request->jenis_kelas,
+    ]);
+
+    return redirect('/datakelas')->with('success', 'Data kelas berhasil ditambahkan!');
     }
 
     /**
@@ -45,7 +57,9 @@ class KelasController extends Controller
      */
     public function edit(string $id)
     {
-        //
+         $kelas = Kelas::findOrFail($id);
+            return view('datakelas.edit',compact('kelas'));
+
     }
 
     /**
@@ -53,7 +67,16 @@ class KelasController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+       $request->validate([
+        'jenis_kelas' => 'required|string|max:255',
+    ]);
+
+    $kelas = Kelas::findOrFail($id);
+    $kelas->update([
+        'jenis_kelas' => $request->jenis_kelas,
+    ]);
+
+    return redirect('/datakelas')->with('success', 'Data kelas berhasil diperbarui!');
     }
 
     /**
@@ -61,6 +84,7 @@ class KelasController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $deleted = Kelas::where('id', $id)->delete();
+        return redirect ('/datakelas');
     }
 }
