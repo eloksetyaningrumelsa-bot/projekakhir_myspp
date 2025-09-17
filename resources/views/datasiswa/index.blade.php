@@ -4,9 +4,9 @@
         <div class="container-fluid px-4 mt-3">
             <!-- TABEL -->
             <div class="card mb-4">
-                <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="card-header d-flex justify-content-between align-items-center bg-secondary">
                     <div>
-                        <i class="fas fa-table me-1"></i>
+                        <i class="fas fa-table me-1 "></i>
                         Data Siswa
                     </div>
                     <!-- Tombol Tambah Siswa -->
