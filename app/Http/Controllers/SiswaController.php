@@ -13,9 +13,9 @@ class SiswaController extends Controller
     public function index()
     {
         // mengambil seluruh data dari tb_siswa
-        $siswa = Siswa ::all();
+        $siswa = Siswa::all();
         // melakukan pasing data ke view index
-        return view('datasiswa.index', ['siswa' => $siswa]);
+        return view('datasiswa.index', compact('siswa'));
     }
 
     public function create()
