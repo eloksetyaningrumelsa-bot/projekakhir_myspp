@@ -80,7 +80,7 @@
                                
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td>2</td>
                                 <td>Garrett Winters</td>
                                 <td>Tokyo</td>
                                 <td>X AKL</td>
