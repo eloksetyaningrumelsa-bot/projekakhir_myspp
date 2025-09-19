@@ -13,15 +13,23 @@ Route::get('/', function () {
 });
 //data siswa 
 Route::get('/datasiswa', [SiswaController::class, 'index']);
-Route::get('/datasiswa/tambah', [SiswaController::class, 'create'])->name('datasiswa.add');
+Route::get('/datasiswa/tambah', [SiswaController::class, 'create']);
 Route::post('/datasiswa', [SiswaController::class, 'store']);
+Route::get('/datasiswa/edit/{id}', [SiswaController::class, 'edit']);
+Route::put('/datasiswa/update/{id}', [SiswaController::class, 'update']);
+Route::get('/datasiswa/delete/{id}', [SiswaController::class, 'destroy']);
+
+
 
 // data kelas 
 Route::get('/datakelas', [KelasController::class, 'index']);
-Route::get('/datakelas/tambah', [KelasController::class, 'create'])->name('datakelas.add');
+Route::get('/datakelas/tambah', [KelasController::class, 'create']);
 Route::post('/datakelas', [KelasController::class, 'store']);
+Route::get('/datakelas/edit/{id}', [KelasController::class, 'edit']);
+Route::put('/datakelas/update/{id}', [KelasController::class, 'update']);
+Route::get('/datakelas/delete/{id}', [KelasController::class, 'destroy']);
 
-
+//data pembayaran 
 Route::get('datapembayaran', function () {
     return view('datapembayaran');
 });

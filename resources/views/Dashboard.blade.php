@@ -68,9 +68,15 @@
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>
                                 <td>
-                                    
+                                    <button class="btn btn-link p-0 text-warning">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                    <button class="btn btn-link p-0 text-danger"
+                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
                                 </td>
-                               
+
                             </tr>
                             <tr>
                                 <td>2</td>
@@ -78,13 +84,23 @@
                                 <td>Tokyo</td>
                                 <td>X AKL</td>
                                 <td>
-                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>
                                 <td>
-                                   
+
                                 </td>
-                               
+
                             </tr>
+                            <<<<<<< HEAD=======<tr>
+                                <td>3</td>
+                                <td>Garrett Winters</td>
+                                <td>Tokyo</td>
+                                <td>X AKL</td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                </td>
+                                </tr>
+                                >>>>>>> 36c9cac21964a1129b1f966d4b3743948f25cee9
                         </tbody>
                     </table>
                 </div>
