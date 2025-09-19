@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\kelasController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\PembayaranController;
 
 Route::get('/', [HomeController::class, 'Dashbord']);
 
@@ -30,9 +31,9 @@ Route::put('/datakelas/update/{id}', [KelasController::class, 'update']);
 Route::get('/datakelas/delete/{id}', [KelasController::class, 'destroy']);
 
 //data pembayaran 
-Route::get('datapembayaran', function () {
-    return view('datapembayaran');
-});
+Route::get('/datapembayaran', [PembayaranController::class, 'index']);
+
+
 Route::get('login', function () {
     return view('login');
 });
