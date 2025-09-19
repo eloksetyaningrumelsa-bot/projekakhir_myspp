@@ -6,7 +6,7 @@
         <div class="container-fluid px-4 mt-3">
             <!-- KARTU JUMLAH SISWA -->
             <div class="row">
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-3">
                     <div class="card bg-primary text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">TK</h5>
@@ -14,7 +14,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-3">
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">SD</h5>
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-3">
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">SMP</h5>
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-3">
                     <div class="card bg-danger text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">SMA/SMK</h5>
@@ -67,7 +67,16 @@
                                 <td>
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>
-                               
+                                <td>
+                                    <button class="btn btn-link p-0 text-warning">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                    <button class="btn btn-link p-0 text-danger"
+                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </td>
+
                             </tr>
                             <tr>
                                 <td>2</td>
@@ -77,7 +86,10 @@
                                 <td>
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>
-                               
+                                <td>
+
+                                </td>
+
                             </tr>
                             <tr>
                                 <td>2</td>
@@ -87,9 +99,8 @@
                                 <td>
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>
-                            </tr>
+                                </tr>
                         </tbody>
-
                     </table>
                 </div>
             </div>
