@@ -98,13 +98,18 @@
 
                             </tr>
                             <tr>
+<<<<<<< HEAD
                                 <td>3</td>
+=======
+                                <td>2</td>
+>>>>>>> 6d6ef3ed50d3191e7d060ff41b7638be368ec1a4
                                 <td>Garrett Winters</td>
                                 <td>Tokyo</td>
                                 <td>X AKL</td>
                                 <td>
                                     <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                 </td>
+<<<<<<< HEAD
                                 <td>
                                     <button class="btn btn-link p-0 text-warning">
                                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -115,6 +120,9 @@
                                     </button>
                                 </td>
                             </tr>
+=======
+                                </tr>
+>>>>>>> 6d6ef3ed50d3191e7d060ff41b7638be368ec1a4
                         </tbody>
                     </table>
                 </div>
