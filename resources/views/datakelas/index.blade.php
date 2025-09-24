@@ -31,18 +31,20 @@
                                     <td>{{ $item->jenis_kelas}}</td> {{-- kalau di tabel DB kolomnya nama_kelas --}}
                                     <td>
                                         <div class="d-flex align-items-center gap-2">
-                                            <!-- tombol ubah -->
+                                            <!-- Tombol ubah -->
                                             <a href="/datakelas/edit/{{ $item->id }}" class="btn btn-warning btn-sm"
                                                 title="Ubah">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <!-- tombol hapus -->
-                                            <a href="/datakelas/delete/{{$item->id}}" class=" btn btn-link text-danger p-0"
+
+                                            <!-- Tombol hapus -->
+                                            <a href="/datakelas/delete/{{ $item->id }}" class="btn btn-danger btn-sm"
                                                 title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                                <i class="fas fa-trash fa-2x"></i>
+                                                <i class="fas fa-trash"></i>
                                             </a>
                                         </div>
                                     </td>
+
                                 </tr>
                             @endforeach
                         </tbody>

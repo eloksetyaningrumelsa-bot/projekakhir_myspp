@@ -13,6 +13,8 @@
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
 
     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
     @stack('styles')
