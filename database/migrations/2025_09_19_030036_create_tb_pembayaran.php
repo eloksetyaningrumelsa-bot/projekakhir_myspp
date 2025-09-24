@@ -6,23 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('tb_pembayaran', function (Blueprint $table) {
-            $table->id()->primary();
-            $table->string('nama', 255);
-            $table->string('tagihan', 255);
-            $table->dateTime('tanggal_pembayaran', 255);
-            $table->integer('jumlah_bayar', 255);
+            $table->id(); // primary key auto_increment
+            $table->string('nama');
+            $table->string('tagihan');
+            $table->date('tanggal_pembayaran'); // pakai date atau datetime tanpa (255)
+            $table->integer('jumlah_bayar'); // cukup integer, jangan auto_increment
+            $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('tb_pembayaran');

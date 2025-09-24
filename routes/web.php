@@ -6,6 +6,7 @@ use App\Http\Controllers\kelasController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\PembayaranController;
 
+
 Route::get('/', [HomeController::class, 'Dashbord']);
 
 
@@ -32,6 +33,12 @@ Route::get('/datakelas/delete/{id}', [KelasController::class, 'destroy']);
 
 //data pembayaran 
 Route::get('/datapembayaran', [PembayaranController::class, 'index']);
+Route::get('/datapembayaran/tambah', [PembayaranController::class, 'create']);
+Route::post('/datapembayaran', [PembayaranController::class, 'store']);
+Route::get('/datapembayaran/{id}', [PembayaranController::class, 'edit']);
+Route::put('/datapembayaran/update/{id}', [PembayaranController::class, 'update']);
+Route::get('/datapembayaran/delete/{id}', [PembayaranController::class, 'destroy']);
+
 
 
 Route::get('login', function () {

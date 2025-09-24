@@ -76,7 +76,7 @@ class SiswaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-          $request->validate([
+        $request->validate([
         'nama_lengkap' => 'required|string|max:100',
         'alamat'       => 'required',
         'kelas'        => 'required',

@@ -4,7 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class pembayaran extends Model
+class Pembayaran extends Model
 {
-    //
+    protected $table = 'datapembayaran'; // sesuaikan dengan nama tabel di DB
+
+    protected $fillable = [
+        'nama',
+        'tagihan',
+        'tanggal_pembayaran',
+        'jumlah_bayar',
+    ];
+
+    public $timestamps = false; // agar tidak error
 }
