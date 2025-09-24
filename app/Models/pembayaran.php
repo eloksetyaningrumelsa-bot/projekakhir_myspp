@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pembayaran extends Model
 {
-    protected $table = 'datapembayaran'; // sesuaikan dengan nama tabel di DB
+    protected $table = 'tb_pembayaran'; // sesuaikan dengan nama tabel di DB
 
     protected $fillable = [
         'nama',
