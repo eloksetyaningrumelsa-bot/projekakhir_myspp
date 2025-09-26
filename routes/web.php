@@ -35,7 +35,7 @@ Route::get('/datakelas/delete/{id}', [KelasController::class, 'destroy']);
 Route::get('/datapembayaran', [PembayaranController::class, 'index']);
 Route::get('/datapembayaran/tambah', [PembayaranController::class, 'create']);
 Route::post('/datapembayaran', [PembayaranController::class, 'store']);
-Route::get('/datapembayaran/{id}', [PembayaranController::class, 'edit']);
+Route::get('/datapembayaran/edit/{id}', [PembayaranController::class, 'edit']); 
 Route::put('/datapembayaran/update/{id}', [PembayaranController::class, 'update']);
 Route::get('/datapembayaran/delete/{id}', [PembayaranController::class, 'destroy']);
 

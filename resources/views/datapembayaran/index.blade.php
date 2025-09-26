@@ -4,18 +4,16 @@
         <div class="container-fluid px-4 mt-3">                  
             <!-- TABEL PEMBAYARAN -->
             <div class="card mb-4">
-                <div class="card-header d-flex justify-content-between align-items-center bg-secondary">
+                <div class="card-header d-flex justify-content-between align-items-center bg-secondary text-white">
                     <div>
                         <i class="fas fa-table me-1"></i>
                         Data Pembayaran
                     </div>
-                    <!-- Tombol Tambah Kelas -->
+                    <!-- Tombol Tambah Pembayaran -->
                     <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambahPembayaran">
                         <i class="fas fa-plus"></i> Tambah Pembayaran
                     </button>
-
                 </div>
-                
 
                 <div class="card-body">
                     <table id="datatablesSimple" class="table table-bordered text-center">
@@ -29,19 +27,19 @@
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                         <tbody>
-
+                        <tbody>
                             @forelse($pembayaran as $key => $item)
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $item->nama }}</td>
                                     <td>{{ $item->tagihan }}</td>
-                                    <td>{{ $item->tgl_bayar }}</td>
-                                    <td>{{ $item->jumlah_bayar }}</td>
-                                    <td>Rp {{ number_format($item->jumlah_bayar, 0, ',', '.') }}</td>
+                                    <td>{{ $item->tanggal_pembayaran }}</td>
+                                    <td>Rp {{$item->jumlah_bayar }}</td>
                                     <td>
                                         <!-- tombol ubah -->
-                                        <a href="/datapembayaran/edit/{{ $item->id }}" class="btn btn-warning btn-sm" title="Ubah">
+                                        <a href="/datapembayaran/edit/{{ $item->id }}" 
+                                           class="btn btn-warning btn-sm" 
+                                           title="Ubah">
                                             <i class="fas fa-edit"></i>
                                         </a>
                                         <!-- tombol hapus -->
@@ -55,7 +53,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                             
+                                    <td colspan="6" class="text-center">Data pembayaran belum tersedia</td>
                                 </tr>
                             @endforelse
                         </tbody> 
@@ -64,6 +62,6 @@
             </div>
         </div>
     </main>
-    @include('datapembayaran.tambah')
 
+    @include('datapembayaran.tambah')
 @endsection
