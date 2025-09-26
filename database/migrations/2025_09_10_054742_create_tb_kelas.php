@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tb_kelas', function (Blueprint $table) {
             $table->id();
-            $table->string('jenis_kelas', 255);
+            $table->enum('jenis_kelas', ['TK', 'SD', 'SMP', 'SMK']);
         });
     }
 

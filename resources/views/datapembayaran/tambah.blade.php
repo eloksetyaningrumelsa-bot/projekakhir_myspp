@@ -22,7 +22,7 @@
                     <div class="mb-3">
                         <label for="tagihan" class="form-label">Tagihan</label>
                         <input type="text" class="form-control" name="tagihan" id="tagihan"
-                            placeholder="Masukkan nama tagihan (contoh: SPP September)" required>
+                            placeholder="Masukkan tagihan " required>
                     </div>
 
                     <div class="mb-3">
@@ -38,9 +38,10 @@
 
                     <div class="mb-3">
                         <label for="status" class="form-label">Status</label>
-                        <select class="form-select" name="status" id="status" required>
+                        <select class="form-control" name="status" id="status" required>
+                            <option value="" disabled selected>Pilih status pembayaran</option>
                             <option value="Lunas">Lunas</option>
-                            <option value="Belum Bayar">Belum Bayar</option>
+                            <option value="Belum Lunas">Belum Lunas</option>
                         </select>
                     </div>
                 </div>

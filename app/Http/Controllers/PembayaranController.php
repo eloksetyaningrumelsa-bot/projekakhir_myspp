@@ -36,6 +36,7 @@ class PembayaranController extends Controller
         'tagihan'       => 'required',
         'tanggal_pembayaran'     => 'required',
         'jumlah_bayar'  => 'required',
+        'status'  => 'required',
         ]);
 
         // simpan ke database
@@ -44,6 +45,7 @@ class PembayaranController extends Controller
         'tagihan'       => $request->tagihan,
         'tanggal_pembayaran'     => $request->tanggal_pembayaran,
         'jumlah_bayar'  => $request->jumlah_bayar,
+        'status'  => $request->status,
     ]);
 
          return redirect('/datapembayaran')->with('success', 'Data pembayaran berhasil ditambahkan!');
@@ -72,18 +74,20 @@ class PembayaranController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-        'nama'          => 'required|string|max:100',
-        'tagihan'       => 'required',
-        'tanggal_pembayaran'     => 'required',
-        'jumlah_bayar'  => 'required',
+        'nama'                  => 'required|string|max:100',
+        'tagihan'               => 'required',
+        'tanggal_pembayaran'    => 'required',
+        'jumlah_bayar'          => 'required',
+        'status'          => 'required',
     ]);
 
     $pembayaran = Pembayaran::findOrFail($id);
     $pembayaran->update([
-        'nama'          => $request->nama,
-        'tagihan'       => $request->tagihan,
+        'nama'                   => $request->nama,
+        'tagihan'                => $request->tagihan,
         'tanggal_pembayaran'     => $request->tanggal_pembayaran,
-        'jumlah_bayar'  => $request->jumlah_bayar,
+        'jumlah_bayar'           => $request->jumlah_bayar,
+        'status'                 => $request->status,
     ]);
     
     return redirect('/datapembayaran')->with('success', 'Data pembayaran berhasil diperbarui!');

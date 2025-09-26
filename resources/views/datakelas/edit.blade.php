@@ -11,17 +11,20 @@
 
                     <div class="mb-3">
                         <label for="jenis_kelas" class="form-label">Jenis Kelas</label>
-                        <input type="text" class="form-control" name="jenis_kelas" id="jenis_kelas"
-                            value="{{ $kelas->jenis_kelas ?? '' }}" placeholder="Masukkan Jenis Kelas" required>
+                        <select class="form-control" name="jenis_kelas" id="jenis_kelas" required>
+                            <option value="" disabled>Pilih Jenis Kelas</option>
+                            <option value="TK"  {{ $kelas->jenis_kelas == 'TK' ? 'selected' : '' }}>TK</option>
+                            <option value="SD"  {{ $kelas->jenis_kelas == 'SD' ? 'selected' : '' }}>SD</option>
+                            <option value="SMP" {{ $kelas->jenis_kelas == 'SMP' ? 'selected' : '' }}>SMP</option>
+                            <option value="SMK" {{ $kelas->jenis_kelas == 'SMK' ? 'selected' : '' }}>SMK</option>
+                        </select>
                     </div>
-
-
 
                 </div>
 
                 <!-- Footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger me-6" data-bs-dismiss="modal">Batal</button>
+                <div class="modal-footer justify-content-end">
+                    <a href="{{ url('/datakelas') }}" class="btn btn-danger me-3">Batal</a>
                     <button type="submit" class="btn btn-success">Simpan</button>
                 </div>
             </form>

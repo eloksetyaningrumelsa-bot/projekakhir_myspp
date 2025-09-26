@@ -14,7 +14,8 @@ return new class extends Migration
             $table->string('tagihan');
             $table->date('tanggal_pembayaran'); // pakai date atau datetime tanpa (255)
             $table->integer('jumlah_bayar'); // cukup integer, jangan auto_increment
-            $table->timestamps();
+            $table->enum('status', ['Lunas', 'Belum Lunas'])->default('Lunas');// cukup integer, jangan auto_increment
+
         });
     }
 

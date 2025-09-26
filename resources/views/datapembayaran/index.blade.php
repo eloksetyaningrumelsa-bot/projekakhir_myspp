@@ -24,6 +24,7 @@
                                 <th>Tagihan</th>
                                 <th>Tgl Bayar</th>
                                 <th>Jumlah Bayar</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -34,7 +35,16 @@
                                     <td>{{ $item->nama }}</td>
                                     <td>{{ $item->tagihan }}</td>
                                     <td>{{ $item->tanggal_pembayaran }}</td>
-                                    <td>Rp {{$item->jumlah_bayar }}</td>
+                                    <td>Rp {{ number_format($item->jumlah_bayar, 0, ',', '.') }}</td>
+                                    <td>
+                                        @if($item->status == 'Lunas')
+                                            <span class="badge bg-success">{{ $item->status }}</span>
+                                        @elseif($item->status == 'Belum Lunas')
+                                            <span class="badge bg-danger">{{ $item->status }}</span>
+                                        @else
+                                            <span class="badge bg-secondary">-</span>
+                                        @endif
+                                    </td>
                                     <td>
                                         <!-- tombol ubah -->
                                         <a href="/datapembayaran/edit/{{ $item->id }}" 
@@ -53,7 +63,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6" class="text-center">Data pembayaran belum tersedia</td>
+                                    <td colspan="7" class="text-center">Data pembayaran belum tersedia</td>
                                 </tr>
                             @endforelse
                         </tbody> 

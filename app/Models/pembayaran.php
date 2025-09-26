@@ -13,6 +13,7 @@ class Pembayaran extends Model
         'tagihan',
         'tanggal_pembayaran',
         'jumlah_bayar',
+        'status',
     ];
 
     public $timestamps = false; // agar tidak error
