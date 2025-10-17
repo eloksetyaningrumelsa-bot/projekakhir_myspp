@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Siswa;
+use App\Models\Kelas;
 use Illuminate\Http\Request;
 
 class SiswaController extends Controller
@@ -14,8 +15,9 @@ class SiswaController extends Controller
     {
         // mengambil seluruh data dari tb_siswa
         $siswa = Siswa::all();
+        $kelas = Kelas::all();
         // melakukan pasing data ke view index
-        return view('datasiswa.index', compact('siswa'));
+         return view('datasiswa.index', compact('siswa', 'kelas'));
     }
 
     public function create()

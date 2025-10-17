@@ -10,7 +10,7 @@
                     <div class="card bg-primary text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">TK</h5>
-                            <h2 class="fw-bold">25 Siswa</h2>
+                            <h2 class="fw-bold">{{ $tk }} Siswa</h2>
                         </div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">SD</h5>
-                            <h2 class="fw-bold">55 Siswa</h2>
+                            <h2 class="fw-bold">{{ $sd }} Siswa</h2>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">SMP</h5>
-                            <h2 class="fw-bold">60 Siswa</h2>
+                            <h2 class="fw-bold">{{ $smp }} Siswa</h2>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="card bg-danger text-white mb-4">
                         <div class="card-body text-center">
                             <h5 class="mb-2">SMA/SMK</h5>
-                            <h2 class="fw-bold">80 Siswa</h2>
+                            <h2 class="fw-bold">{{ $smk }} Siswa</h2>
                         </div>
                     </div>
                 </div>

@@ -24,14 +24,19 @@
                     </div>
                     <div class="mb-3">
                         <label for="kelas" class="form-label">Kelas</label>
-                        <input type="text" class="form-control" name="kelas" id="kelas" placeholder="Masukkan kelas">
+                        <select class="form-select" name="kelas" id="kelas" required>
+                            <option value="">-- Pilih Kelas --</option>
+                            @foreach ($kelas as $item)
+                                <option value="{{ $item->jenis_kelas }}">{{ $item->jenis_kelas }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="ortu" class="form-label">Orang Tua</label>
                         <input type="text" class="form-control" name="ortu" id="ortu"
                             placeholder="Masukkan nama orang tua">
                     </div>
-                      <div class="mb-3">
+                    <div class="mb-3">
                         <label for="no_tlpn" class="form-label">No.Telepon</label>
                         <input type="number" class="form-control" name="no_tlpn" id="no_tlpn"
                             placeholder="Masukkan nomor telepon yang aktif">

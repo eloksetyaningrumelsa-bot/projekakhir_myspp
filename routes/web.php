@@ -7,12 +7,8 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\PembayaranController;
 
 
-Route::get('/', [HomeController::class, 'Dashbord']);
+Route::get('/', [HomeController::class, 'index']);
 
-
-Route::get('/', function () {
-    return view('Dashboard');
-});
 //data siswa 
 Route::get('/datasiswa', [SiswaController::class, 'index']);
 Route::get('/datasiswa/tambah', [SiswaController::class, 'create']);

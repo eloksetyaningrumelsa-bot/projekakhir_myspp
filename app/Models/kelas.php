@@ -7,9 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Kelas extends Model
 {
     protected $table = 'tb_kelas';
-    protected $fillable = ['jenis_kelas']; // bukan 'jenis_kelas'
-
-    // ini untuk menyambungkan ke table
-    public $timestamps = false; // agar tidak error
-
+    protected $fillable = ['jenis_kelas', 'jumlah_siswa'];
+    public $timestamps = false;
 }
