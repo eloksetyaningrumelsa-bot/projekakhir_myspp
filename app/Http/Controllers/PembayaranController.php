@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pembayaran;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class PembayaranController extends Controller
@@ -14,8 +15,9 @@ class PembayaranController extends Controller
     {
        // mengambil seluruh data dari tb_siswa
         $pembayaran = Pembayaran::all();
+        $siswa = Siswa::all();
         // melakukan pasing data ke view index
-        return view('datapembayaran.index', ['pembayaran' => $pembayaran]);
+        return view('datapembayaran.index', compact('pembayaran', 'siswa'));
     }
 
     /**

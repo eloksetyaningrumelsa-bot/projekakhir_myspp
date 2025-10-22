@@ -14,9 +14,13 @@
                 @csrf
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="nama" class="form-label">Nama Siswa</label>
-                        <input type="text" class="form-control" name="nama" id="nama"
-                            placeholder="Masukkan nama siswa" required>
+                        <label for="kelas" class="form-label">Nama</label>
+                        <select class="form-select" name="kelas" id="kelas" required>
+                            <option value="">-- Pilih Nama --</option>
+                            @foreach ($siswa as $item)
+                                <option value="{{ $item->nama }}">{{ $item->nama }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="mb-3">
@@ -27,7 +31,9 @@
 
                     <div class="mb-3">
                         <label for="tanggal_pembayaran" class="form-label">Tanggal Pembayaran</label>
-                        <input type="date" class="form-control" name="tanggal_pembayaran" id="tanggal_pembayaran" required>
+                        <input type="date" class="form-control" name="tanggal_pembayaran" id="tanggal_pembayaran"
+                            value="{{ date('Y-m-d') }}" required>
+
                     </div>
 
                     <div class="mb-3">
