@@ -69,13 +69,17 @@
                                         <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
                                     </td>
                                     <td>
-                                        <button class="btn btn-link p-0 text-warning">
-                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                         <button class="btn btn-warning btn-sm" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#editPembayaran{{ $item->id }}">
+                                            <i class="fas fa-magnifying-glass-chart"></i>
                                         </button>
-                                        <button class="btn btn-link p-0 text-danger"
-                                            onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
+                                        <!-- tombol hapus -->
+                                            <a href="/datasiswa/delete/{{ $item->id }}" 
+                                               class="btn btn-danger btn-sm"
+                                               onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
                                     </td>
                                 </tr>
                             @endforeach
