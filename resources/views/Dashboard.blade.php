@@ -59,64 +59,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Elsa Elok Setyaningrum</td>
-                                <td>Tokyo</td>
-                                <td>XI RPL 1</td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
-                                </td>
-                                <td>
-                                    <button class="btn btn-link p-0 text-warning">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                    <button class="btn btn-link p-0 text-danger"
-                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </button>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Della Sabrina Indah P</td>
-                                <td>Tokyo</td>
-                                <td>X AKL</td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
-                                </td>
-                                <td>
-                                    <button class="btn btn-link p-0 text-warning">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                    <button class="btn btn-link p-0 text-danger"
-                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </button>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Garrett Winters</td>
-                                <td>Tokyo</td>
-                                <td>X AKL</td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
-                                </td>
-
-                                <td>
-                                    <button class="btn btn-link p-0 text-warning">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                    <button class="btn btn-link p-0 text-danger"
-                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                            @foreach ($siswa as $item)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $item->nama }}</td>
+                                    <td>{{ $item->alamat }}</td>
+                                    <td>{{ $item->kelas }}</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-danger status-btn">Belum Bayar</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-link p-0 text-warning">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                        <button class="btn btn-link p-0 text-danger"
+                                            onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </td>
                                 </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

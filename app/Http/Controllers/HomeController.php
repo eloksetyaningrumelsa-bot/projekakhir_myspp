@@ -13,7 +13,8 @@ class HomeController extends Controller
         $sd  = Siswa::where('kelas', 'like', '%SD%')->count();
         $smp = Siswa::where('kelas', 'like', '%SMP%')->count();
         $smk = Siswa::where('kelas', 'like', '%SMK%')->count();
+        $siswa = Siswa::all();
 
-        return view('dashboard', compact('tk', 'sd', 'smp', 'smk'));
+        return view('dashboard', compact('tk', 'sd', 'smp', 'smk', 'siswa'));
     }
 }

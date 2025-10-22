@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama', 255);
             $table->string('alamat', 255);
             $table->string('kelas', 255);
-            $table->string('orang_tua', 4);
+            $table->string('orang_tua', 225);
             $table->string('no_telepon')->nullable();;
         });
     }
