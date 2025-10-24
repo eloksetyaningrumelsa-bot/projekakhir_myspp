@@ -1,3 +1,4 @@
+@foreach ($pembayaran as $pembayaran)
 <!-- MODAL EDIT PEMBAYARAN -->
 <div class="modal fade" id="editPembayaran{{ $pembayaran->id }}" tabindex="-1" aria-labelledby="editPembayaranLabel{{ $pembayaran->id }}" aria-hidden="true">
     <div class="modal-dialog">
@@ -14,17 +15,16 @@
                 @csrf
                 @method('PUT')
                 <div class="modal-body">
-
                     <div class="mb-3">
                         <label for="nama{{ $pembayaran->id }}" class="form-label">Nama Siswa</label>
                         <input type="text" class="form-control" name="nama" id="nama{{ $pembayaran->id }}"
-                            value="{{ $pembayaran->nama }}" placeholder="Masukkan nama siswa" required>
+                            value="{{ $pembayaran->nama }}" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="tagihan{{ $pembayaran->id }}" class="form-label">Tagihan</label>
-                        <input type="text" class="form-control" name="tagihan" id="tagihan{{ $pembayaran->id }}"
-                            value="{{ $pembayaran->tagihan }}" placeholder="Masukkan tagihan" required>
+                        <input type="number" class="form-control" name="tagihan" id="tagihan{{ $pembayaran->id }}"
+                            value="{{ $pembayaran->tagihan }}" required>
                     </div>
 
                     <div class="mb-3">
@@ -36,17 +36,8 @@
                     <div class="mb-3">
                         <label for="jumlah_bayar{{ $pembayaran->id }}" class="form-label">Jumlah Bayar</label>
                         <input type="number" class="form-control" name="jumlah_bayar" id="jumlah_bayar{{ $pembayaran->id }}"
-                            value="{{ $pembayaran->jumlah_bayar }}" placeholder="Masukkan jumlah bayar" required>
+                            value="{{ $pembayaran->jumlah_bayar }}" required>
                     </div>
-
-                    <div class="mb-3">
-                        <label for="status{{ $pembayaran->id }}" class="form-label">Status</label>
-                        <select class="form-control" name="status" id="status{{ $pembayaran->id }}" required>
-                            <option value="Lunas" {{ $pembayaran->status == 'Lunas' ? 'selected' : '' }}>Lunas</option>
-                            <option value="Belum Lunas" {{ $pembayaran->status == 'Belum Lunas' ? 'selected' : '' }}>Belum Lunas</option>
-                        </select>
-                    </div>
-
                 </div>
 
                 <!-- Footer -->
@@ -55,7 +46,7 @@
                     <button type="submit" class="btn btn-success">Simpan</button>
                 </div>
             </form>
-
         </div>
     </div>
 </div>
+@endforeach

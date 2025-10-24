@@ -13,10 +13,11 @@ class PembayaranController extends Controller
      */
     public function index()
     {
-       // mengambil seluruh data dari tb_siswa
+        // Mengambil seluruh data dari tabel
         $pembayaran = Pembayaran::all();
         $siswa = Siswa::all();
-        // melakukan pasing data ke view index
+
+        // Mengirim data ke view
         return view('datapembayaran.index', compact('pembayaran', 'siswa'));
     }
 
@@ -25,7 +26,7 @@ class PembayaranController extends Controller
      */
     public function create()
     {
-            return view('datapembayaran.tambah');
+        return view('datapembayaran.tambah');
     }
 
     /**
@@ -33,32 +34,21 @@ class PembayaranController extends Controller
      */
     public function store(Request $request)
     {
-         $request->validate([
-        'nama'          => 'required|string|max:100',
-        'tagihan'       => 'required',
-        'tanggal_pembayaran'     => 'required',
-        'jumlah_bayar'  => 'required',
-        'status'  => 'required',
+        $request->validate([
+            'nama' => 'required|string|max:100',
+            'tagihan' => 'required',
+            'tanggal_pembayaran' => 'required|date',
+            'jumlah_bayar' => 'required|numeric',
         ]);
 
-        // simpan ke database
-         Pembayaran::create([
-        'nama'          => $request->nama,
-        'tagihan'       => $request->tagihan,
-        'tanggal_pembayaran'     => $request->tanggal_pembayaran,
-        'jumlah_bayar'  => $request->jumlah_bayar,
-        'status'  => $request->status,
-    ]);
+        Pembayaran::create([
+            'nama' => $request->nama,
+            'tagihan' => $request->tagihan,
+            'tanggal_pembayaran' => $request->tanggal_pembayaran,
+            'jumlah_bayar' => $request->jumlah_bayar,
+        ]);
 
-         return redirect('/datapembayaran')->with('success', 'Data pembayaran berhasil ditambahkan!');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+        return redirect('/datapembayaran')->with('success', 'Data pembayaran berhasil ditambahkan!');
     }
 
     /**
@@ -67,7 +57,7 @@ class PembayaranController extends Controller
     public function edit(string $id)
     {
         $pembayaran = Pembayaran::findOrFail($id);
-            return view('datapembayaran.edit',compact('pembayaran'));
+        return view('datapembayaran.edit', compact('pembayaran'));
     }
 
     /**
@@ -76,23 +66,21 @@ class PembayaranController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-        'nama'                  => 'required|string|max:100',
-        'tagihan'               => 'required',
-        'tanggal_pembayaran'    => 'required',
-        'jumlah_bayar'          => 'required',
-        'status'          => 'required',
-    ]);
+            'nama' => 'required|string|max:100',
+            'tagihan' => 'required',
+            'tanggal_pembayaran' => 'required|date',
+            'jumlah_bayar' => 'required|numeric',
+        ]);
 
-    $pembayaran = Pembayaran::findOrFail($id);
-    $pembayaran->update([
-        'nama'                   => $request->nama,
-        'tagihan'                => $request->tagihan,
-        'tanggal_pembayaran'     => $request->tanggal_pembayaran,
-        'jumlah_bayar'           => $request->jumlah_bayar,
-        'status'                 => $request->status,
-    ]);
-    
-    return redirect('/datapembayaran')->with('success', 'Data pembayaran berhasil diperbarui!');
+        $pembayaran = Pembayaran::findOrFail($id);
+        $pembayaran->update([
+            'nama' => $request->nama,
+            'tagihan' => $request->tagihan,
+            'tanggal_pembayaran' => $request->tanggal_pembayaran,
+            'jumlah_bayar' => $request->jumlah_bayar,
+        ]);
+
+        return redirect('/datapembayaran')->with('success', 'Data pembayaran berhasil diperbarui!');
     }
 
     /**
@@ -100,7 +88,9 @@ class PembayaranController extends Controller
      */
     public function destroy(string $id)
     {
-         $deleted = Pembayaran::where('id', $id)->delete();
-        return redirect ('/datapembayaran');
+        Pembayaran::where('id', $id)->delete();
+        return redirect('/datapembayaran')->with('success', 'Data pembayaran berhasil dihapus!');
     }
+
+    
 }

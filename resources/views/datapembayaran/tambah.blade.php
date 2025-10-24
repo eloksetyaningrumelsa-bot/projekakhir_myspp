@@ -14,8 +14,8 @@
                 @csrf
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="kelas" class="form-label">Nama</label>
-                        <select class="form-select" name="kelas" id="kelas" required>
+                        <label for="nama" class="form-label">Nama</label>
+                        <select class="form-select" name="nama" id="nama" required>
                             <option value="">-- Pilih Nama --</option>
                             @foreach ($siswa as $item)
                                 <option value="{{ $item->nama }}">{{ $item->nama }}</option>
@@ -25,30 +25,20 @@
 
                     <div class="mb-3">
                         <label for="tagihan" class="form-label">Tagihan</label>
-                        <input type="text" class="form-control" name="tagihan" id="tagihan"
-                            placeholder="Masukkan tagihan " required>
+                        <input type="number" class="form-control" name="tagihan" id="tagihan"
+                            placeholder="Masukkan jumlah tagihan" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="tanggal_pembayaran" class="form-label">Tanggal Pembayaran</label>
-                        <input type="date" class="form-control" name="tanggal_pembayaran" id="tanggal_pembayaran"
+                        <input type="date" class="form-control" name="tanggal_pembayaran"
                             value="{{ date('Y-m-d') }}" required>
-
                     </div>
 
                     <div class="mb-3">
                         <label for="jumlah_bayar" class="form-label">Jumlah Bayar</label>
                         <input type="number" class="form-control" name="jumlah_bayar" id="jumlah_bayar"
-                            placeholder="Masukkan jumlah bayar" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="status" class="form-label">Status</label>
-                        <select class="form-control" name="status" id="status" required>
-                            <option value="" disabled selected>Pilih status pembayaran</option>
-                            <option value="Lunas">Lunas</option>
-                            <option value="Belum Lunas">Belum Lunas</option>
-                        </select>
+                            placeholder="Masukkan jumlah pembayaran" required>
                     </div>
                 </div>
 
