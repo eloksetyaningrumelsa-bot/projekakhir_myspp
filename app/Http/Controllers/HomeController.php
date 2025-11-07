@@ -39,12 +39,14 @@ class HomeController extends Controller
                 'nama'           => $s->nama,
                 'alamat'         => $s->alamat,
                 'kelas'          => $s->kelas,
+                'tagihan'        => $totalTagihan, 
                 'jumlah_cicilan' => $totalBayar,
                 'sisa_tagihan'   => $sisaTagihan,
                 'status'         => $status,
             ];
         });
 
+        
 
         // Hitung jumlah siswa lunas dan belum lunas
         $jumlahLunas = $dataGabung->where('status', 'Lunas')->count();

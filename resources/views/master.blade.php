@@ -73,6 +73,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-money-bill"></i></div>
                             Pembayaran
                         </a>
+                        <a class="nav-link" href="{{ url('laporan') }}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                            Laporan
+                        </a>
                         <a class="nav-link" href="{{ url('logout') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
                             Log Out

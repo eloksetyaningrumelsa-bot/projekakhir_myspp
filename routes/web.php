@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LaporanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KelasController;
@@ -32,6 +33,14 @@ Route::post('/datapembayaran', [PembayaranController::class, 'store']);
 Route::get('/datapembayaran/edit/{id}', [PembayaranController::class, 'edit']); 
 Route::put('/datapembayaran/update/{id}', [PembayaranController::class, 'update']);
 Route::get('/datapembayaran/delete/{id}', [PembayaranController::class, 'destroy']);
+
+// Laporan
+Route::get('/laporan', [LaporanController::class, 'index']);
+// Route::get('/datapembayaran/tambah', [PembayaranController::class, 'create']);
+// Route::post('/datapembayaran', [PembayaranController::class, 'store']);
+// Route::get('/datapembayaran/edit/{id}', [PembayaranController::class, 'edit']); 
+// Route::put('/datapembayaran/update/{id}', [PembayaranController::class, 'update']);
+// Route::get('/datapembayaran/delete/{id}', [PembayaranController::class, 'destroy']);
 
 // Halaman tambahan
 Route::get('login', function () {

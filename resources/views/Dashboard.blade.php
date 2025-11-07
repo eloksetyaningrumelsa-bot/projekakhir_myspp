@@ -72,7 +72,6 @@
                                                     <td>{{ $item['nama'] }}</td>
                                                     <td>{{ $item['alamat'] }}</td>
                                                     <td>{{ $item['kelas'] }}</td>
-
                                                     <td>
                                                         {{ is_numeric($item['jumlah_cicilan'])
                                 ? 'Rp ' . number_format($item['jumlah_cicilan'], 0, ',', '.')
@@ -83,54 +82,79 @@
                                 ? 'Rp ' . number_format($item['sisa_tagihan'], 0, ',', '.')
                                 : $item['sisa_tagihan'] }}
                                                     </td>
-
                                                     <td>
                                                         <button
                                                             class="btn btn-sm {{ $item['status'] == 'Lunas' ? 'btn-success' : 'btn-danger' }}">
                                                             {{ $item['status'] }}
                                                         </button>
                                                     </td>
-
                                                     <td>
                                                         <!-- Tombol Detail -->
                                                         <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
                                                             data-bs-target="#modalDetail{{ $item['id'] }}">
                                                             <i class="fas fa-magnifying-glass-chart"></i>
                                                         </button>
-
-                                                        
                                                     </td>
                                                 </tr>
-
-                                                <!-- Modal Kosong -->
-                                                <div class="modal fade" id="modalDetail{{ $item['id'] }}" tabindex="-1"
-                                                    aria-labelledby="modalLabel{{ $item['id'] }}" aria-hidden="true">
-                                                    <div class="modal-dialog modal-dialog-centered">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header bg-warning text-white">
-                                                                <h5 class="modal-title" id="modalLabel{{ $item['id'] }}">
-                                                                    Detail Data - {{ $item['nama'] }}
-                                                                </h5>
-                                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                                    aria-label="Close"></button>
-                                                            </div>
-
-                                                            <div class="modal-body text-center text-muted">
-                                                                Belum ada isi. Tambahkan konten di sini.
-                                                            </div>
-
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary"
-                                                                    data-bs-dismiss="modal">Tutup</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
+
+            <!-- MODAL DETAIL PEMBAYARAN DENGAN TABEL BIASA -->
+            @foreach ($dataGabung as $item)
+                <div class="modal fade" id="modalDetail{{ $item['id'] }}" tabindex="-1"
+                    aria-labelledby="modalLabel{{ $item['id'] }}" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content shadow">
+                            <div class="modal-header bg-warning text-white">
+                                <h5 class="modal-title" id="modalLabel{{ $item['id'] }}">
+                                    Kartu Pembayaran - {{ $item['nama'] }}
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body text-center">
+
+                                <!-- LOGO DAN IDENTITAS -->
+                                <div class="mb-3">
+                                    <img src="{{ asset('assets/img/logo.png') }}" alt="Logo Sekolah" width="80" class="mb-2">
+                                    <h6 class="fw-bold mb-0">MYSPP BRILLIANT</h6>
+                                    <small class="text-muted">SMK PGRI WLINGI</small>
+                                    <hr class="mt-3">
+                                </div>
+
+                                <!-- TABEL BIASA -->
+                                <table class="table table-bordered text-center align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Tanggal</th>
+                                            <th>Tagihan</th>
+                                            <th>Sisa Tagihan</th>
+                                            <th>Paraf</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ $item['tanggal'] ?? date('d/m/Y') }}</td>
+                                            <td>Rp {{ number_format($item['tagihan'], 0, ',', '.') }}</td>
+                                            <td>Rp {{ number_format($item['sisa_tagihan'], 0, ',', '.') }}</td>
+                                            <td>____________________</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
         </div>
     </main>
 

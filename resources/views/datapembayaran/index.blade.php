@@ -14,9 +14,6 @@
                         <i class="fas fa-plus"></i> Tambah Pembayaran
                     </button>
                 </div>
-                <div class="mt-2 d-flex justify-content-end">
-                    <div id="exportButtons" class="me-3"></div>
-                </div>
                 <div class="card-body">
                     <table id="datatablesSimple" class="table table-bordered text-center">
                         <thead class="table-secondary">
@@ -68,57 +65,5 @@
 
     {{-- Modal Edit --}}
     @include('datapembayaran.edit')
-
-    @push('scripts')
-        <style>
-            /* Biar search box lebih rapi */
-            div.dataTables_filter {
-                padding: 0.75rem 1rem;
-            }
-
-            /* Biar tulisan "Showing x to y" lebih rapi */
-            div.dataTables_info {
-                padding: 0.75rem 1rem;
-            }
-
-            /* Biar pagination (Previous/Next) ada spasi */
-            div.dataTables_paginate {
-                padding: 0.75rem 1rem;
-            }
-
-            /* Biar dropdown "Show entries" juga ada padding */
-            div.dataTables_length {
-                padding: 0.75rem 1rem;
-            }
-        </style>
-
-        <script>
-            $(document).ready(function () {
-                let table = $('#datatablesSimple').DataTable({
-                    dom: 'Bfrtip',
-                    buttons: [
-                        {
-                            extend: 'excel',
-                            text: '<i class="bx bx-file me-1"></i> Excel',
-                            className: 'btn btn-sm btn-success'
-                        },
-                        {
-                            extend: 'pdf',
-                            text: '<i class="bx bx-file me-1"></i> PDF',
-                            className: 'btn btn-sm btn-danger'
-                        },
-                    ],
-                    order: [[0, 'asc']],
-                    pageLength: 10,
-                    lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "Semua"]],
-                    searching: false  // <-- menonaktifkan search
-                });
-
-                // Pindahkan tombol ke dalam div di card-header
-                table.buttons().container().appendTo('#exportButtons');
-            });
-        </script>
-
-    @endpush
 
 @endsection
