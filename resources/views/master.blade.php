@@ -77,7 +77,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
                             Laporan
                         </a>
-                        <a class="nav-link" href="{{ url('logout') }}">
+                        <a class="nav-link" href="{{ url('sesi') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
                             Log Out
                         </a>
