@@ -22,7 +22,7 @@
                                 <th>Alamat</th>
                                 <th>Tagihan</th>
                                 <th>Jumlah Bayar</th>
-                                <th>Sisa Tagihan</th>
+                                <th>Sisa Uang Tagihan</th>
                             </tr>
                         </thead>
                         <tbody>
